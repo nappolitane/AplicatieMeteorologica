@@ -4,14 +4,19 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.mta.se.lab.controller.WeatherController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label text="This is a simple Weather App and uses OpenWeatherMap API." AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="170.0">
+      <Label layoutX="277.0" layoutY="29.0" text="Alegeti tara" AnchorPane.leftAnchor="225.0" AnchorPane.topAnchor="15.0">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="60.0" text="OK" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" />
-      <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="60.0" text="Cancel" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="100.0" />
+      <ChoiceBox fx:id="countryChoiceBox" layoutX="225.0" layoutY="45.0" prefWidth="150.0" AnchorPane.leftAnchor="225.0" />
+      <Label layoutX="225.0" layoutY="82.0" text="Alegeti orasul" AnchorPane.leftAnchor="225.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="cityChoiceBox" layoutX="225.0" layoutY="112.0" prefWidth="150.0" AnchorPane.leftAnchor="225.0" />
    </children>
 </AnchorPane>

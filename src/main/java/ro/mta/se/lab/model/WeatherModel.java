@@ -1,10 +1,12 @@
 package ro.mta.se.lab.model;
 
-import javafx.beans.property.DoubleProperty;
-import javafx.beans.property.StringProperty;
-
 import java.util.Date;
 
+/**
+ * Aceasta clasa modelul din patternul de MVC.
+ * In aceasta clasa sunt pastrate valorile returnate de API pentru a le afisa
+ * in interfata grafica
+ */
 public class WeatherModel
 {
     String mCountry;

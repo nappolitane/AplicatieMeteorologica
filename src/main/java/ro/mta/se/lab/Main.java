@@ -16,6 +16,10 @@ import java.util.Scanner;
 
 public class Main extends Application
 {
+    /**
+     * Aceasta variabila este o lista de ConfigEntry si este responsabila de
+     * mentinerea in memorie a fisierului de configurare
+     */
     private ObservableList<ConfigEntry> configData = FXCollections.observableArrayList();
 
     public static void main(String[] args)
@@ -23,15 +27,22 @@ public class Main extends Application
         launch(args);
     }
 
+    /**
+     * Functia implementeaza citirea fisierului de configurare si adaugarea
+     * datelor in lista de variabile de tipul ConfigEntry care vor fi folosite
+     * ulterior in clasa WeatherController
+     */
     private void initConfigData(String fName)
     {
         try {
             File fObj = new File(fName);
             Scanner myReader = new Scanner(fObj);
-            while (myReader.hasNextLine()) {
+            while (myReader.hasNextLine()) { // Se citeste linie cu linie fisierul de configurare
                 String data = myReader.nextLine();
-                String[] entries = data.split(" ");
-                configData.add(new ConfigEntry(Long.parseLong(entries[0]),entries[1],Float.parseFloat(entries[2]),Float.parseFloat(entries[3]),entries[4]));
+                String[] entries = data.split(" "); // Se imparte fiecare linie in cuvinte(intrari)
+                /* Se adauga fiecare dintre cuvintele(intrarile) din fisier in aceasta lista */
+                configData.add(new ConfigEntry(Long.parseLong(entries[0]),entries[1],
+                        Float.parseFloat(entries[2]),Float.parseFloat(entries[3]),entries[4]));
             }
             myReader.close();
         }
@@ -48,7 +59,7 @@ public class Main extends Application
         FXMLLoader loader = new FXMLLoader();
         try {
             loader.setLocation(this.getClass().getResource("/view/WeatherView.fxml"));
-            loader.setController(new WeatherController(configData));
+            loader.setController(new WeatherController(configData)); // Se trimite ca parametru lista cu datele din fisierul de configurare
             primaryStage.setScene(new Scene(loader.load()));
             primaryStage.show();
         } catch (IOException e) {

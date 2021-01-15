@@ -1,0 +1,5 @@
+[15.01.2021-18:13:28] Romania; Bucharest; Fri Jan 15 18:10:35 EET 2021; Astazi este: clear sky; -0.45 grade Celsius; Vant: 1.54 m/s; Umiditate: 74.0%; 
+[15.01.2021-18:14:01] Portugalia; Porto; Fri Jan 15 16:09:16 EET 2021; Astazi este: clear sky; 11.83 grade Celsius; Vant: 2.06 m/s; Umiditate: 76.0%; 
+[15.01.2021-18:14:25] Suedia; Stockholm; Fri Jan 15 17:10:07 EET 2021; Astazi este: broken clouds; -7.08 grade Celsius; Vant: 3.6 m/s; Umiditate: 86.0%; 
+[15.01.2021-18:21:39] Belgia; Gent; Fri Jan 15 17:18:45 EET 2021; Astazi este: overcast clouds; 1.5 grade Celsius; Vant: 1.29 m/s; Umiditate: 80.0%; 
+[15.01.2021-18:35:19] Ungaria; Budapest; Fri Jan 15 17:25:26 EET 2021; Astazi este: few clouds; -0.97 grade Celsius; Vant: 1.54 m/s; Umiditate: 86.0%; 

@@ -1,115 +1,75 @@
 package ro.mta.se.lab.model;
 
-import javafx.beans.property.FloatProperty;
+import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.StringProperty;
+
+import java.util.Date;
 
 public class WeatherModel
 {
-    StringProperty mCountry;
-    StringProperty mCity;
-    FloatProperty mLon;
-    FloatProperty mLat;
+    String mCountry;
+    String mCity;
+    Date mDateTime;
+    String mWeatherDescription;
+    Double mTemperature;
+    Double mWindSpeed;
+    Double mHumidity;
 
-    StringProperty mWeatherMain;
-    StringProperty mWeatherDescription;
-    FloatProperty mTemperature;
-    FloatProperty mWindSpeed;
-    FloatProperty mRainVolume;
-    FloatProperty mSnowVolume;
-
-    public WeatherModel(StringProperty mCountry, StringProperty mCity, FloatProperty mLon,
-                        FloatProperty mLat, StringProperty mWeatherMain, StringProperty mWeatherDescription,
-                        FloatProperty mTemperature, FloatProperty mWindSpeed, FloatProperty mRainVolume,
-                        FloatProperty mSnowVolume) {
-        this.mCountry = mCountry;
-        this.mCity = mCity;
-        this.mLon = mLon;
-        this.mLat = mLat;
-        this.mWeatherMain = mWeatherMain;
-        this.mWeatherDescription = mWeatherDescription;
-        this.mTemperature = mTemperature;
-        this.mWindSpeed = mWindSpeed;
-        this.mRainVolume = mRainVolume;
-        this.mSnowVolume = mSnowVolume;
-    }
+    public WeatherModel(){ }
 
     public String getmCountry() {
-        return mCountry.get();
-    }
-
-    public StringProperty mCountryProperty() {
         return mCountry;
     }
 
-    public String getmCity() {
-        return mCity.get();
+    public void setmCountry(String Country) {
+        this.mCountry = Country;
     }
 
-    public StringProperty mCityProperty() {
+    public String getmCity() {
         return mCity;
     }
 
-    public float getmLon() {
-        return mLon.get();
+    public void setmCity(String City) {
+        this.mCity = City;
     }
 
-    public FloatProperty mLonProperty() {
-        return mLon;
+    public Date getmDateTime() {
+        return mDateTime;
     }
 
-    public float getmLat() {
-        return mLat.get();
-    }
-
-    public FloatProperty mLatProperty() {
-        return mLat;
-    }
-
-    public String getmWeatherMain() {
-        return mWeatherMain.get();
-    }
-
-    public StringProperty mWeatherMainProperty() {
-        return mWeatherMain;
+    public void setmDateTime(Date DateTime) {
+        this.mDateTime = DateTime;
     }
 
     public String getmWeatherDescription() {
-        return mWeatherDescription.get();
-    }
-
-    public StringProperty mWeatherDescriptionProperty() {
         return mWeatherDescription;
     }
 
-    public float getmTemperature() {
-        return mTemperature.get();
+    public void setmWeatherDescription(String WeatherDescription) {
+        this.mWeatherDescription = WeatherDescription;
     }
 
-    public FloatProperty mTemperatureProperty() {
+    public Double getmTemperature() {
         return mTemperature;
     }
 
-    public float getmWindSpeed() {
-        return mWindSpeed.get();
+    public void setmTemperature(Double Temperature) {
+        this.mTemperature = Temperature;
     }
 
-    public FloatProperty mWindSpeedProperty() {
+    public Double getmWindSpeed() {
         return mWindSpeed;
     }
 
-    public float getmRainVolume() {
-        return mRainVolume.get();
+    public void setmWindSpeed(Double WindSpeed) {
+        this.mWindSpeed = WindSpeed;
     }
 
-    public FloatProperty mRainVolumeProperty() {
-        return mRainVolume;
+    public Double getmHumidity() {
+        return mHumidity;
     }
 
-    public float getmSnowVolume() {
-        return mSnowVolume.get();
-    }
-
-    public FloatProperty mSnowVolumeProperty() {
-        return mSnowVolume;
+    public void setmHumidity(Double Humidity) {
+        this.mHumidity = Humidity;
     }
 }

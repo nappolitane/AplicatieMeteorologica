@@ -1,5 +1,9 @@
 package ro.mta.se.lab;
 
+/**
+ * Aceasta clasa este folosita pentru a pastra fiecare intrare din fisierul
+ * de configurare intr-o lista de astfel de structura
+ */
 public class ConfigEntry {
     long mId;
     String mCity;

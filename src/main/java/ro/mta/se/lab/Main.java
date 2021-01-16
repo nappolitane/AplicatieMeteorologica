@@ -32,7 +32,7 @@ public class Main extends Application
      * datelor in lista de variabile de tipul ConfigEntry care vor fi folosite
      * ulterior in clasa WeatherController
      */
-    private void initConfigData(String fName)
+    private int initConfigData(String fName)
     {
         try {
             File fObj = new File(fName);
@@ -40,6 +40,8 @@ public class Main extends Application
             while (myReader.hasNextLine()) { // Se citeste linie cu linie fisierul de configurare
                 String data = myReader.nextLine();
                 String[] entries = data.split(" "); // Se imparte fiecare linie in cuvinte(intrari)
+                if(entries.length != 5)
+                    return 1;
                 /* Se adauga fiecare dintre cuvintele(intrarile) din fisier in aceasta lista */
                 configData.add(new ConfigEntry(Long.parseLong(entries[0]),entries[1],
                         Float.parseFloat(entries[2]),Float.parseFloat(entries[3]),entries[4]));
@@ -51,12 +53,19 @@ public class Main extends Application
             System.out.println("An error occurred.");
             e.printStackTrace();
         }
+        return 0;
     }
 
     public void start(Stage primaryStage)
     {
-        initConfigData("src/main/resources/config_file.txt");
+        int status = initConfigData("src/main/resources/config_file.txt");
+        if(status == 1){
+            System.out.println("Config file error: incorrect format!");
+            System.exit(status);
+        }
+
         FXMLLoader loader = new FXMLLoader();
+
         try {
             loader.setLocation(this.getClass().getResource("/view/WeatherView.fxml"));
             loader.setController(new WeatherController(configData)); // Se trimite ca parametru lista cu datele din fisierul de configurare

@@ -4,3 +4,4 @@
 [15.01.2021-18:21:39] Belgia; Gent; Fri Jan 15 17:18:45 EET 2021; Astazi este: overcast clouds; 1.5 grade Celsius; Vant: 1.29 m/s; Umiditate: 80.0%; 
 [15.01.2021-18:35:19] Ungaria; Budapest; Fri Jan 15 17:25:26 EET 2021; Astazi este: few clouds; -0.97 grade Celsius; Vant: 1.54 m/s; Umiditate: 86.0%; 
 [15.01.2021-19:00:54] Germania; Dortmund; Fri Jan 15 17:48:04 EET 2021; Astazi este: light snow; 0.18 grade Celsius; Vant: 3.09 m/s; Umiditate: 80.0%; 
+[16.01.2021-19:01:54] Russia; Kazan; Sat Jan 16 19:48:35 EET 2021; Astazi este: snow; -10.0 grade Celsius; Vant: 5.0 m/s; Umiditate: 85.0%; 

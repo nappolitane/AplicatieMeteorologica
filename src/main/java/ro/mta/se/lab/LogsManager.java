@@ -14,7 +14,7 @@ public class LogsManager
     private static String logFilePath = "src/main/resources/log_file.txt";
 
     // Aceasta functie scrie in fisierul de log variabila line primita ca parametru
-    public static void logThis(String line)
+    public int logThis(String line)
     {
         try {
             File myObj = new File(logFilePath);
@@ -26,8 +26,10 @@ public class LogsManager
             myWriter.close();
         }
         catch (IOException e) {
-            System.out.println("An error occurred.");
+            System.out.println("An error occurred. Can not write to log file!");
             e.printStackTrace();
+            return 1;
         }
+        return 0;
     }
 }

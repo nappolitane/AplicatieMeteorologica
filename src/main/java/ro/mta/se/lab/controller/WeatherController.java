@@ -11,6 +11,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.ChoiceBox;
 import ro.mta.se.lab.LogsManager;
 import ro.mta.se.lab.WeatherAPIManager;
+import ro.mta.se.lab.WeatherAPIManagerTest;
 import ro.mta.se.lab.model.WeatherModel;
 
 import java.util.Date;
@@ -214,7 +215,8 @@ public class WeatherController
 
                 String weatherInfo = showWeatherInfo(); // Se afiseaza informatiile in interfata grafica
 
-                LogsManager.logThis(weatherInfo); // Se introduce log-ul respectiv afisarii
+                LogsManager logger = new LogsManager();
+                logger.logThis(weatherInfo); // Se introduce log-ul respectiv afisarii
             }
         });
     }
